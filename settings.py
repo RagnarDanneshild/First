@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'PostCard',
+    'social_auth',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -72,6 +73,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'untitled1.wsgi.application'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+    'social_auth.context_processors.social_auth_by_name_backends',
+
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -89,7 +96,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Minsk'
 
 USE_I18N = True
 
@@ -102,3 +109,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+FACEBOOK_APP_ID = '1521201841513566'
+FACEBOOK_API_SECRET = 'c3c6b19c0e8bef5b3a6784dda670303e'
+TWITTER_CONSUMER_KEY = 'hkTzniC1T1YMAi3wZ8Gfn7idg '
+TWITTER_CONSUMER_SECRET = 'xeOsgLhajgjWKveiTdxVp5NfcTyA1SR44vDLqHcWly9ShRk3Rx'
+VK_APP_ID = '5078864'
+VKONTAKTE_APP_ID = VK_APP_ID
+VK_API_SECRET = '55SlhMHd9soFODPXsn1d'
+VKONTAKTE_APP_SECRET = VK_API_SECRET
