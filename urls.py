@@ -17,7 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-     url(r'^$', 'PostCard.views.home', name='home'),
+    url(r'^$', 'PostCard.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
-        url('', include('social.apps.django_app.urls', namespace='social'))
+    url('', include('social.apps.django_app.urls', namespace='social'))
 ]
