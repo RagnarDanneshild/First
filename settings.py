@@ -38,8 +38,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'PostCard',
-    'social_auth',
+    'social.apps.django_app.default',
+
 )
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -76,8 +81,17 @@ WSGI_APPLICATION = 'untitled1.wsgi.application'
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
-    'social_auth.context_processors.social_auth_by_name_backends',
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
 
+)
+AUTHENTICATION_BACKENDS = (
+       'social.backends.twitter.TwitterOAuth',
+
+    'social.backends.facebook.Facebook2OAuth2',
+    'social.backends.vk.VKAppOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 # Database
