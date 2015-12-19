@@ -86,8 +86,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 )
 AUTHENTICATION_BACKENDS = (
-       'social.backends.twitter.TwitterOAuth',
-
+ 'social.backends.twitter.TwitterOAuth',
     'social.backends.facebook.Facebook2OAuth2',
     'social.backends.vk.VKAppOAuth2',
 
