@@ -91,6 +91,7 @@ AUTHENTICATION_BACKENDS = (
     'social.backends.vk.VKAppOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
+
 )
 
 # Database
